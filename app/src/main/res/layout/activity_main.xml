@@ -7,128 +7,134 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/g1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:text="Guess #1"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/g1c"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/g1c"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Guess #1 Check"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView6"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintBottom_toTopOf="@+id/g2"
+        app:layout_constraintStart_toStartOf="@+id/g1"
+        app:layout_constraintTop_toBottomOf="@+id/g1" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/g2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Guess #2"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintBottom_toTopOf="@+id/g2c"
+        app:layout_constraintStart_toStartOf="@+id/g1c"
+        app:layout_constraintTop_toBottomOf="@+id/g1c" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/g2c"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Guess #2 Check"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintStart_toStartOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintBottom_toTopOf="@+id/g3"
+        app:layout_constraintStart_toStartOf="@+id/g2"
+        app:layout_constraintTop_toBottomOf="@+id/g2" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/g3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Guess #3"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
-        app:layout_constraintStart_toStartOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintBottom_toTopOf="@+id/g3c"
+        app:layout_constraintStart_toStartOf="@+id/g2c"
+        app:layout_constraintTop_toBottomOf="@+id/g2c" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/g3c"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Guess #3 Check"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
-        app:layout_constraintStart_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintStart_toStartOf="@+id/g3"
+        app:layout_constraintTop_toBottomOf="@+id/g3" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/g1txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:text="TextView"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView11"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/g1ctxt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/g1ctxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView9"
-        app:layout_constraintEnd_toEndOf="@+id/textView7"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/g2txt"
+        app:layout_constraintEnd_toEndOf="@+id/g1txt"
+        app:layout_constraintTop_toBottomOf="@+id/g1txt" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/g2txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView8"
-        app:layout_constraintEnd_toEndOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/g2ctxt"
+        app:layout_constraintEnd_toEndOf="@+id/g1ctxt"
+        app:layout_constraintTop_toBottomOf="@+id/g1ctxt" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/g2ctxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView10"
-        app:layout_constraintEnd_toEndOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/g3txt"
+        app:layout_constraintEnd_toEndOf="@+id/g2txt"
+        app:layout_constraintTop_toBottomOf="@+id/g2txt" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/g3txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView12"
-        app:layout_constraintEnd_toEndOf="@+id/textView8"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/g3ctxt"
+        app:layout_constraintEnd_toEndOf="@+id/g2ctxt"
+        app:layout_constraintTop_toBottomOf="@+id/g2ctxt" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/g3ctxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
-        app:layout_constraintEnd_toEndOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintEnd_toEndOf="@+id/g3txt"
+        app:layout_constraintTop_toBottomOf="@+id/g3txt"
+        android:visibility="invisible" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline5"
@@ -138,12 +144,13 @@
         app:layout_constraintGuide_begin="446dp" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/wordToGuess"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="54dp"
         android:text="ANSWER"
         android:textSize="40sp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/editText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -159,12 +166,14 @@
         android:layout_marginBottom="21dp"
         android:hint="Enter a four letter guess here"
         android:textSize="20sp"
+        android:maxLength="4"
+        android:maxLines="1"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintEnd_toStartOf="@+id/guessBtn"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/guessBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
