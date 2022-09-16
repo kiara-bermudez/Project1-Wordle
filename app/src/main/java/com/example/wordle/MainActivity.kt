@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         // References
         val guessButton = findViewById<Button>(R.id.guessBtn)
+        val resetButton = findViewById<Button>(R.id.resetBtn)
         val answer = findViewById<TextView>(R.id.wordToGuess)
         val editText = findViewById<EditText>(R.id.editText)
 
@@ -36,13 +37,19 @@ class MainActivity : AppCompatActivity() {
             if (userInput.length != 4) {
                 Toast.makeText(it.context, "Your guess should contain 4 letters!", Toast.LENGTH_SHORT).show()
             } else {
+                // References
+                val g1txt = findViewById<TextView>(R.id.g1txt)
+                val g1ctxt = findViewById<TextView>(R.id.g1ctxt)
+                val g2txt = findViewById<TextView>(R.id.g2txt)
+                val g2ctxt = findViewById<TextView>(R.id.g2ctxt)
+                val g3txt = findViewById<TextView>(R.id.g3txt)
+                val g3ctxt = findViewById<TextView>(R.id.g3ctxt)
+
                 // Guess 1
                 if (guessNum == 1) {
                     // Get reference to relevant guess 1 text views
                     val g1 = findViewById<TextView>(R.id.g1)
                     val g1c = findViewById<TextView>(R.id.g1c)
-                    val g1txt = findViewById<TextView>(R.id.g1txt)
-                    val g1ctxt = findViewById<TextView>(R.id.g1ctxt)
 
                     // Update guess #1 and guess #1 check text views
                     g1txt.text = userInput.toString()
@@ -57,8 +64,6 @@ class MainActivity : AppCompatActivity() {
                     // Get reference to relevant guess 2 text views
                     val g2 = findViewById<TextView>(R.id.g2)
                     val g2c = findViewById<TextView>(R.id.g2c)
-                    val g2txt = findViewById<TextView>(R.id.g2txt)
-                    val g2ctxt = findViewById<TextView>(R.id.g2ctxt)
 
                     // Update guess #2 and guess #2 check text views
                     g2txt.text = userInput.toString()
@@ -73,8 +78,6 @@ class MainActivity : AppCompatActivity() {
                     // Get reference to relevant guess 3 text views
                     val g3 = findViewById<TextView>(R.id.g3)
                     val g3c = findViewById<TextView>(R.id.g3c)
-                    val g3txt = findViewById<TextView>(R.id.g3txt)
-                    val g3ctxt = findViewById<TextView>(R.id.g3ctxt)
 
                     // Update guess #3 and guess #3 check text views
                     g3txt.text = userInput
@@ -87,8 +90,41 @@ class MainActivity : AppCompatActivity() {
                     // Game is over so make answer visible
                     answer.visibility = View.VISIBLE
 
-                    // Reset guessNum
-                    guessNum = 0
+                    //////// Reset game
+                    // Make reset button visible and guess button invisible
+                    resetButton.visibility = View.VISIBLE
+                    guessButton.visibility = View.INVISIBLE
+
+                    resetButton.setOnClickListener {
+                        // Reset guessNum to 0
+                        guessNum = 1
+
+                        // Reset all text views to empty
+                        g1txt.text = ""
+                        g1ctxt.text = ""
+                        g2txt.text = ""
+                        g2ctxt.text = ""
+                        g3txt.text = ""
+                        g3ctxt.text = ""
+
+                        // Make text views invisible again
+                        g1txt.visibility = View.INVISIBLE
+                        g1ctxt.visibility = View.INVISIBLE
+                        g2txt.visibility = View.INVISIBLE
+                        g2ctxt.visibility = View.INVISIBLE
+                        g3txt.visibility = View.INVISIBLE
+                        g3ctxt.visibility = View.INVISIBLE
+                        answer.visibility = View.INVISIBLE
+
+                        // Choose new word to guess and set answer text
+                        wordToGuess = getRandomFourLetterWord()
+                        answer.text = wordToGuess
+
+                        // Make reset button invisible and guessButton visible again
+                        resetButton.visibility = View.INVISIBLE
+                        guessButton.visibility = View.VISIBLE
+                    }
+
                 }
 
                 // Increment guessNum
