@@ -1,8 +1,10 @@
 package com.example.wordle
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -44,6 +46,10 @@ class MainActivity : AppCompatActivity() {
                 val g2ctxt = findViewById<TextView>(R.id.g2ctxt)
                 val g3txt = findViewById<TextView>(R.id.g3txt)
                 val g3ctxt = findViewById<TextView>(R.id.g3ctxt)
+
+                // Close keyboard and clear editText field
+                closeKeyBoard()
+                editText.getText().clear()
 
                 // Guess 1
                 if (guessNum == 1) {
@@ -157,5 +163,14 @@ class MainActivity : AppCompatActivity() {
             }
         }
         return result
+    }
+
+    /** Close keyboard function **/
+    private fun closeKeyBoard() {
+        val view = this.currentFocus
+        if (view != null) {
+            val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            imm.hideSoftInputFromWindow(view.windowToken, 0)
+        }
     }
 }
