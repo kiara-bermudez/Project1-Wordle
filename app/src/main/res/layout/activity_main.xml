@@ -13,7 +13,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:text="Guess #1"
-        android:textSize="24sp"
+        android:textSize="24dp"
         app:layout_constraintBottom_toTopOf="@+id/g1c"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Guess #1 Check"
-        android:textSize="24sp"
+        android:textSize="24dp"
         app:layout_constraintBottom_toTopOf="@+id/g2"
         app:layout_constraintStart_toStartOf="@+id/g1"
         app:layout_constraintTop_toBottomOf="@+id/g1" />
@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Guess #2"
-        android:textSize="24sp"
+        android:textSize="24dp"
         app:layout_constraintBottom_toTopOf="@+id/g2c"
         app:layout_constraintStart_toStartOf="@+id/g1c"
         app:layout_constraintTop_toBottomOf="@+id/g1c" />
@@ -43,7 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Guess #2 Check"
-        android:textSize="24sp"
+        android:textSize="24dp"
         app:layout_constraintBottom_toTopOf="@+id/g3"
         app:layout_constraintStart_toStartOf="@+id/g2"
         app:layout_constraintTop_toBottomOf="@+id/g2" />
@@ -53,7 +53,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Guess #3"
-        android:textSize="24sp"
+        android:textSize="24dp"
         app:layout_constraintBottom_toTopOf="@+id/g3c"
         app:layout_constraintStart_toStartOf="@+id/g2c"
         app:layout_constraintTop_toBottomOf="@+id/g2c" />
@@ -63,7 +63,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Guess #3 Check"
-        android:textSize="24sp"
+        android:textSize="24dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintStart_toStartOf="@+id/g3"
         app:layout_constraintTop_toBottomOf="@+id/g3" />
@@ -75,7 +75,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:text="TextView"
-        android:textSize="24sp"
+        android:textSize="24dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/g1ctxt"
         app:layout_constraintEnd_toEndOf="parent"
@@ -86,7 +86,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        android:textSize="24sp"
+        android:textSize="24dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/g2txt"
         app:layout_constraintEnd_toEndOf="@+id/g1txt"
@@ -97,7 +97,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        android:textSize="24sp"
+        android:textSize="24dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/g2ctxt"
         app:layout_constraintEnd_toEndOf="@+id/g1ctxt"
@@ -108,7 +108,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        android:textSize="24sp"
+        android:textSize="24dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/g3txt"
         app:layout_constraintEnd_toEndOf="@+id/g2txt"
@@ -119,7 +119,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        android:textSize="24sp"
+        android:textSize="24dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/g3ctxt"
         app:layout_constraintEnd_toEndOf="@+id/g2ctxt"
@@ -130,11 +130,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        android:textSize="24sp"
+        android:textSize="24dp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintEnd_toEndOf="@+id/g3txt"
-        app:layout_constraintTop_toBottomOf="@+id/g3txt"
-        android:visibility="invisible" />
+        app:layout_constraintTop_toBottomOf="@+id/g3txt" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline5"
@@ -165,9 +165,9 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="21dp"
         android:hint="Enter a four letter guess here"
-        android:textSize="20sp"
         android:maxLength="4"
         android:maxLines="1"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guessBtn"
         app:layout_constraintStart_toStartOf="parent" />
@@ -178,6 +178,16 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:text="Guess!"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/resetBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Reset!"
+        android:visibility="invisible"
         app:layout_constraintBaseline_toBaselineOf="@+id/editText"
         app:layout_constraintEnd_toEndOf="parent" />
 
